@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+       Scanner s=new Scanner(System.in);
+        int n1=s.nextInt();
+        int n2=s.nextInt();
+        char op=s.next().charAt(0);
+        float a=n1+n2;
+        float b=n1-n2;
+        float c=n1*n2;
+        float d=(float)n1/n2;
+        float e=n1%n2;
+       switch (op) {
+            case '+':
+                System.out.printf("Addition of two number is "+a);
+                break;
+            case '-':
+                System.out.printf("Subtraction of two number is "+ b);
+                break;
+            case '*':
+                System.out.printf("Multiplication of two number is "+c);
+                break;
+            case '/':
+                if(n2 != 0)
+                    System.out.printf("Division of two number is "+d);
+                else
+                    System.out.println("Invalid Input");
+                break;
+            case '%':
+                if (n2 != 0)
+                    System.out.printf("Modulo of two number is "+e);
+               else
+                    System.out.println("Invalid Input");
+                break;
+            default:
+                System.out.println("Invalid Input");
+        }
+            
+
+    
+    }
+}
